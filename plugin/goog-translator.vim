@@ -91,12 +91,12 @@ function! s:GoogTranslate(...)
   endif
 
   if has_key(s:goog_conf, 'charset')
-    echo iconv(outp,s:goog_conf.charset,&enc)
+    put=iconv(outp,s:goog_conf.charset,&enc)
   else
-    echo outp
+    put=outp
   endif
 
-  return outp
+  " return outp
 endfunction
 
 "sub translator is implemented on v8cgi
